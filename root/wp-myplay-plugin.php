@@ -1,9 +1,9 @@
 <?php
 
 /*
- *  Plugin Name: MyPlay Plugin
+ *  Plugin Name: {%= wp-plugin-name %}
  *  Description: A plugin for MyPlay
- *  Version: 0.0.1
+ *  Version: {%= version %}
  *
  */
 
