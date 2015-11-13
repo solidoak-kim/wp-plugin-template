@@ -23,21 +23,21 @@
       init.prompt('title'),
       init.prompt('description'),
       init.prompt('version', '0.0.1'),
-      init.prompt('wp-plugin-name', 'wp-myplay-plugin'),
+      init.prompt('pluginName', 'MyPlayPlugin'),
     ], function(err, props) {
 
       props.name = props.name.indexOf('wp-') !== 0 ? 'wp-' + props.name : props.name;
 
       // Files to copy (and process).
       var files = init.filesToCopy(props),
-        pluginFolder = props['wp-plugin-name'];
+        pluginFolder = props['pluginName'];
 
       // Update file paths to reflect the name specified from prompt
       for (var file in files) {
         if (file.indexOf('MyPlay/') > -1) {
 
           var path = files[file],
-            newFilePath = file.replace('MyPlay/', 'MyPlay/' + pluginFolder + '/');
+            newFilePath = file.replace('MyPlay/', pluginFolder + '/');
 
           files[newFilePath] = path;
 
