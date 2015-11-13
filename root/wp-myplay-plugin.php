@@ -1,7 +1,7 @@
 <?php
 
 /*
- *  Plugin Name: {%= wp-plugin-name %}
+ *  Plugin Name: {%= pluginName %}
  *  Description: A plugin for MyPlay
  *  Version: {%= version %}
  *
