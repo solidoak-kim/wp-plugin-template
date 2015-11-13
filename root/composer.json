@@ -1,10 +1,11 @@
 {
-  "name": "rgenerator/wp-myplay-plugin",
-  "description": "A WordPress plugin for MyPlay stores",
-  "authors": [],
+  "name": "rgenerator/{%= name %}",
+  "description": "{%= description %}",
   "type": "wordpress-plugin",
+  "version": "{%= version %}",
   "require": {
     "composer/installers": ">=1.0.6",
-    "php": ">=5.6"
-  }
+    "php": ">=5.6",
+  },
+  "authors": []
 }
