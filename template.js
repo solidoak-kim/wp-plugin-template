@@ -76,7 +76,7 @@
         grunt.log.write('\nInitializing Git repository...');
         git('init -q');
         git('add .');
-        git('remote add origin git@github.com:rgenerator/' + props['wp-plugin-name'].toLowerCase() + '.git');
+        git('remote add origin git@github.com:rgenerator/' + props['pluginName'].toLowerCase() + '.git');
         grunt.log.ok();
       } catch (e) {
         grunt.log.writeln();
