@@ -42,6 +42,15 @@
 
           delete files[file];
         }
+
+        if (file.indexOf('wp-myplay-plugin') > -1) {
+          var path = files[file],
+            newFilePath = file.replace('wp-myplay-plugin', props.name);
+
+          files[newFilePath] = path;
+
+          delete files[file];
+        }
       }
 
       // Actually copy (and process) the files.

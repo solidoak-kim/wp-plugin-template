@@ -11,7 +11,7 @@ class SettingsPage extends AbstractSubPage {
     ?>
 
     <div class="wrap">
-      <h2>{%= title %} Plugin Settings</h2>
+      <h2>{%= title %} Settings</h2>
 
       <p>These are the available settings.</p>
 
