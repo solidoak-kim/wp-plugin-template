@@ -1,6 +1,6 @@
 <?php
 
-namespace {%= pluginName %};
+namespace {%= pluginFolder %};
 
 abstract class AbstractSubPage {
   protected $settingsPageProperties;

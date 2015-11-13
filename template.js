@@ -23,21 +23,20 @@
       init.prompt('title'),
       init.prompt('description'),
       init.prompt('version', '0.0.1'),
-      init.prompt('pluginName', 'MyPlayPlugin'),
     ], function(err, props) {
 
       props.name = props.name.indexOf('wp-') !== 0 ? 'wp-' + props.name : props.name;
+      props.pluginFolder = props.title.replace(/\s/g, '');
 
       // Files to copy (and process).
-      var files = init.filesToCopy(props),
-        pluginFolder = props['pluginName'];
+      var files = init.filesToCopy(props);
 
       // Update file paths to reflect the name specified from prompt
       for (var file in files) {
         if (file.indexOf('MyPlay/') > -1) {
 
           var path = files[file],
-            newFilePath = file.replace('MyPlay/', pluginFolder + '/');
+            newFilePath = file.replace('MyPlay/', props.pluginFolder + '/');
 
           files[newFilePath] = path;
 
@@ -76,7 +75,7 @@
         grunt.log.write('\nInitializing Git repository...');
         git('init -q');
         git('add .');
-        git('remote add origin git@github.com:rgenerator/' + props['pluginName'].toLowerCase() + '.git');
+        git('remote add origin git@github.com:rgenerator/' + props.name + '.git');
         grunt.log.ok();
       } catch (e) {
         grunt.log.writeln();

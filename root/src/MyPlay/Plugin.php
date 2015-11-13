@@ -1,6 +1,6 @@
 <?php
 
-namespace {%= pluginName %};
+namespace {%= pluginFolder %};
 
 class Plugin implements \ArrayAccess {
   protected $contents;
