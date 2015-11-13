@@ -7,12 +7,12 @@
  *
  */
 
-use MyPlay\Plugin;
-use MyPlay\SettingsPage;
+use {%= pluginName %}\Plugin;
+use {%= pluginName %}\SettingsPage;
 
 spl_autoload_register( function ( $className ) {
 
-  if ( false !== strpos( $className, 'MyPlay' ) ) {
+  if ( false !== strpos( $className, '{%= pluginName %}' ) ) {
     $classesDir = realpath( plugin_dir_path( __FILE__ ) ) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR;
     $classFile = str_replace( '\\', DIRECTORY_SEPARATOR, $className ) . '.php';
     require_once $classesDir . $classFile;
@@ -29,8 +29,8 @@ add_action( 'plugins_loaded', function () {
   $plugin['version'] = '0.0.1';
   $plugin['settingsPageProperties'] = array(
     'parent_slug'  => 'options-general.php',
-    'page_title'   => 'MyPlay',
-    'menu_title'   => 'MyPlay',
+    'page_title'   => '{%= pluginName %}',
+    'menu_title'   => '{%= pluginName %}',
     'capability'   => 'manage_options',
     'menu_slug'    => 'myplay-settings',
     'option_group' => 'myplay_option_group',

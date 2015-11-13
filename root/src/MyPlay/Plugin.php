@@ -1,6 +1,6 @@
 <?php
 
-namespace MyPlay;
+namespace {%= pluginName %};
 
 class Plugin implements \ArrayAccess {
   protected $contents;

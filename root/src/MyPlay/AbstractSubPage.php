@@ -1,6 +1,6 @@
 <?php
 
-namespace MyPlay;
+namespace {%= pluginName %};
 
 abstract class AbstractSubPage {
   protected $settingsPageProperties;

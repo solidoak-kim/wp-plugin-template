@@ -1,6 +1,6 @@
 <?php
 
-namespace MyPlay;
+namespace {%= pluginName %};
 
 class SettingsPage extends AbstractSubPage {
 
